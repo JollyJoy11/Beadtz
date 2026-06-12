@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5c40aeba314e4c889b49eaaa54b51, type: 3}
+  m_Name: ChappellRoan
+  m_EditorClassIdentifier: 
+  _artistName: Chappell Roan
+  _fame: 435
+  _artistImage: {fileID: 21300000, guid: 42d989bf4a96f054bb06e87c7ea7c2f3, type: 3}
+  _songs:
+  - _songName: Casual
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 8d981c1282a164b4ba8ed4e9afb0c5dd, type: 3}
+  - _songName: Red Wine Supernova
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 42d989bf4a96f054bb06e87c7ea7c2f3, type: 3}
+  - _songName: Pink Pony Club
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: bd621229766b3de4ba2bb0a8b186584d, type: 3}
+  - _songName: Picture You
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 42d989bf4a96f054bb06e87c7ea7c2f3, type: 3}
+  - _songName: Good Luck, Babe!
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: ae4b6a827bb583d47946df653004f958, type: 3}
+  - _songName: The Giver
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 444225c2eb4cd5d40b68323a82a8f5f6, type: 3}
+  - _songName: Kaleidoscope
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 42d989bf4a96f054bb06e87c7ea7c2f3, type: 3}
+  - _songName: Die Young
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 971e02d8cceb1f8429bbff7a756cc1fe, type: 3}
+  - _songName: Femininomenon
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 42d989bf4a96f054bb06e87c7ea7c2f3, type: 3}
+  - _songName: Bitter
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: a082264a73c25334ba34b42976b8ec75, type: 3}

@@ -1,0 +1,37 @@
+# Unity generated
+Library/
+Temp/
+Logs/
+obj/
+Builds/
+UserSettings/
+MemoryCaptures/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+
+# Generated project files
+*.csproj
+*.sln
+*.unityproj
+
+# Build artifacts
+*.pidb
+*.booproj
+*.suo
+*.user
+*.userprefs
+*.tmp
+*.unitypackage
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Crash reports
+crashlytics-build.properties

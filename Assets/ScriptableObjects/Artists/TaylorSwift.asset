@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5c40aeba314e4c889b49eaaa54b51, type: 3}
+  m_Name: TaylorSwift
+  m_EditorClassIdentifier: 
+  _artistName: Taylor Swift
+  _fame: 2813
+  _artistImage: {fileID: 21300000, guid: 85acac341da5ee6449f70d13c8b2d1fb, type: 3}
+  _songs:
+  - _songName: Cruel Summer
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 01134caec5228674087847e23eebb557, type: 3}
+  - _songName: Love Story
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: fae8ce64a8961714999b4867a6e1b08c, type: 3}
+  - _songName: Lover
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 01134caec5228674087847e23eebb557, type: 3}
+  - _songName: Blank Space
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 46025097ee2a65e48aed07dd47e03aac, type: 3}
+  - _songName: Anti-Hero
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 122d99706d0276c42b64b94426faea50, type: 3}
+  - _songName: Style
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 46025097ee2a65e48aed07dd47e03aac, type: 3}
+  - _songName: Shake It Off
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 46025097ee2a65e48aed07dd47e03aac, type: 3}
+  - _songName: London Boy
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 01134caec5228674087847e23eebb557, type: 3}
+  - _songName: You Belong With Me
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: fae8ce64a8961714999b4867a6e1b08c, type: 3}
+  - _songName: Midnight Rain
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 122d99706d0276c42b64b94426faea50, type: 3}

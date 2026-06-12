@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99b4ca536ccbed4c9226e33610904a2, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  _levelUpEXP: 50000
+  _rewardCoin: 3000
+  _artistsToUnlock:
+  - {fileID: 11400000, guid: 85ce1bcf68e20e449939b3133002bfa5, type: 2}
+  - {fileID: 11400000, guid: 6b3373dd47cdbf54495a22cb6e14f36d, type: 2}
+  - {fileID: 11400000, guid: 032f14f0eafd081489823ec2e2703957, type: 2}
+  _cityToUnlock: {fileID: 11400000, guid: 9d5126298d065a040ad6dd924570ab47, type: 2}

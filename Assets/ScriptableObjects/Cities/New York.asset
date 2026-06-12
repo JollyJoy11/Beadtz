@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b08a7489ec2744fb10ee08bd8ca76a, type: 3}
+  m_Name: New York
+  m_EditorClassIdentifier: 
+  _cityName: New York
+  _population: 8258000
+  _crowdMusicTaste:
+  - _genre: 0
+    _preference: 0.92
+  - _genre: 1
+    _preference: 0.73
+  - _genre: 2
+    _preference: 0.67
+  - _genre: 3
+    _preference: 0.46
+  - _genre: 4
+    _preference: 0.25
+  _venues:
+  - {fileID: 11400000, guid: fe5148fcc89fa4d47b1c139fa8b2f335, type: 2}
+  - {fileID: 11400000, guid: 6e53d4ca839493648b7a1c3cc9fd50fe, type: 2}

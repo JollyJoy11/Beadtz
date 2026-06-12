@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b08a7489ec2744fb10ee08bd8ca76a, type: 3}
+  m_Name: Giza
+  m_EditorClassIdentifier: 
+  _cityName: Giza
+  _population: 4800000
+  _crowdMusicTaste:
+  - _genre: 0
+    _preference: 0.53
+  - _genre: 1
+    _preference: 0.45
+  - _genre: 2
+    _preference: 0.36
+  - _genre: 3
+    _preference: 0.12
+  - _genre: 4
+    _preference: 0.17
+  _venues:
+  - {fileID: 11400000, guid: 6a0544e2c3b1f4a4d9079f09579354e6, type: 2}
+  - {fileID: 11400000, guid: 8be0506e7358ac548935ca2d00288c6e, type: 2}

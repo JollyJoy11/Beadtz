@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5c40aeba314e4c889b49eaaa54b51, type: 3}
+  m_Name: BrunoMars
+  m_EditorClassIdentifier: 
+  _artistName: Bruno Mars
+  _fame: 2010
+  _artistImage: {fileID: 21300000, guid: cfc753ef27113bd4c93dc8c55d2c7d86, type: 3}
+  _songs:
+  - _songName: Uptown Funk
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: f7de8773fce6c2b4da214a78b27038bb, type: 3}
+  - _songName: Die With A Smile
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 1dd69d2cf26c62143bdc9545ef71c7d8, type: 3}
+  - _songName: Talking To The Moon
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: eddfee84ac8981345953d24f699d8df8, type: 3}
+  - _songName: 24K Magic
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 5a2807a5f3fae7a48a152edc00515f45, type: 3}
+  - _songName: Just the Way You Are
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: eddfee84ac8981345953d24f699d8df8, type: 3}
+  - _songName: That's What I like
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 5a2807a5f3fae7a48a152edc00515f45, type: 3}
+  - _songName: Billionaire
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: a08c7c8f79ebb7040afa563e7f2f008c, type: 3}
+  - _songName: Count On Me
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: eddfee84ac8981345953d24f699d8df8, type: 3}
+  - _songName: Grenade
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: eddfee84ac8981345953d24f699d8df8, type: 3}
+  - _songName: Treasure
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 4596c3daa2d2dde4e9ea806d58c470f1, type: 3}

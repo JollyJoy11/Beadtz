@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61944a92e98143f44958d40f1a87e4b2, type: 3}
+  m_Name: AKMU
+  m_EditorClassIdentifier: 
+  _artistName: AKMU
+  _fame: 400
+  _artistImage: {fileID: 21300000, guid: e95c552cd7375c541866066e09e90591, type: 3}
+  _songs:
+  - _songName: Farewell
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 358f23b8f2affd04985b63d75a1ade40, type: 3}
+  - _songName: Haughty Girl
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: eb8a975042aa4a34f9be3dce414eddb0, type: 3}
+  - _songName: Hair Part
+    _songGenre: 3
+    _songImage: {fileID: 21300000, guid: 7df05e950e0fefb43a4c8ee17e9fffd4, type: 3}
+  - _songName: Artificial Grass
+    _songGenre: 3
+    _songImage: {fileID: 21300000, guid: 7df05e950e0fefb43a4c8ee17e9fffd4, type: 3}
+  - _songName: Chantey
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 358f23b8f2affd04985b63d75a1ade40, type: 3}
+  - _songName: Last Goodbye
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: e1727c3e6d6da7a449aa9b80e3d00ea1, type: 3}
+  - _songName: Melted
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 7df05e950e0fefb43a4c8ee17e9fffd4, type: 3}
+  - _songName: Endless Dream, Good Night
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 358f23b8f2affd04985b63d75a1ade40, type: 3}
+  - _songName: Moon
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 358f23b8f2affd04985b63d75a1ade40, type: 3}
+  - _songName: Love Lee
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: fd654e556f75cd8458234784258cb89b, type: 3}
+  _members:
+  - Lee Chan Hyuk
+  - Lee Su Hyun

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61944a92e98143f44958d40f1a87e4b2, type: 3}
+  m_Name: OneDirection
+  m_EditorClassIdentifier: 
+  _artistName: One Direction
+  _fame: 1739
+  _artistImage: {fileID: 21300000, guid: b72ceeda00389ad428f29260dafac8f8, type: 3}
+  _songs:
+  - _songName: Night Changes
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: b18531136fa70ba418173ef1c382d292, type: 3}
+  - _songName: Perfect
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: c5ef7734ef993e4498f4f0d922bb6ff9, type: 3}
+  - _songName: What Makes You Beautiful
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: f002f24b18206e44b8a3d2f450ee76c6, type: 3}
+  - _songName: Steal My Girl
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: b18531136fa70ba418173ef1c382d292, type: 3}
+  - _songName: Drag Me Down
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: c5ef7734ef993e4498f4f0d922bb6ff9, type: 3}
+  - _songName: 18
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: b18531136fa70ba418173ef1c382d292, type: 3}
+  - _songName: Kiss You
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 5d38710a4560a7a41ac8b3d767ff1bd9, type: 3}
+  - _songName: Magic
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 5d38710a4560a7a41ac8b3d767ff1bd9, type: 3}
+  - _songName: Best Song Ever
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: a4f8497cfff487d45bf9b5e8ed41bc3e, type: 3}
+  - _songName: Na Na Na
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: f002f24b18206e44b8a3d2f450ee76c6, type: 3}
+  _members:
+  - Harry
+  - Liam
+  - Zayn
+  - Louis
+  - Niall

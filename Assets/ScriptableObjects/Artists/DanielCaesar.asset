@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5c40aeba314e4c889b49eaaa54b51, type: 3}
+  m_Name: DanielCaesar
+  m_EditorClassIdentifier: 
+  _artistName: Daniel Caesar
+  _fame: 569
+  _artistImage: {fileID: 21300000, guid: 77393ddd5f9679e40b2974b14b392d25, type: 3}
+  _songs:
+  - _songName: Always
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: fa7ff28a539d08c4094c67f6d0145852, type: 3}
+  - _songName: Toronto 2014
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: fa7ff28a539d08c4094c67f6d0145852, type: 3}
+  - _songName: Japanese Denim
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 252a0f5cf89cfa24fa986bb576684754, type: 3}
+  - _songName: CYANIDE
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 91b5d72e9a2873d4891f582bb01b6a96, type: 3}
+  - _songName: Unstoppable
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: fa7ff28a539d08c4094c67f6d0145852, type: 3}
+  - _songName: Pain Is Inevitable
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: fa7ff28a539d08c4094c67f6d0145852, type: 3}
+  - _songName: ENTROPY
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 91b5d72e9a2873d4891f582bb01b6a96, type: 3}
+  - _songName: A Cappella
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: ceed8775e1cf5374d8373317731a42cf, type: 3}
+  - _songName: Death & Taxes
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: ceed8775e1cf5374d8373317731a42cf, type: 3}
+  - _songName: Little Rowboat
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: ceed8775e1cf5374d8373317731a42cf, type: 3}

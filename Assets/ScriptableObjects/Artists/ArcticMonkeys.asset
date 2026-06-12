@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61944a92e98143f44958d40f1a87e4b2, type: 3}
+  m_Name: ArcticMonkeys
+  m_EditorClassIdentifier: 
+  _artistName: Arctic Monkeys
+  _fame: 930
+  _artistImage: {fileID: 21300000, guid: 51a053d384fb9d04a92539fe5b0261f6, type: 3}
+  _songs:
+  - _songName: Secret Door
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 2285bfb19618cb340903ddccf88c3367, type: 3}
+  - _songName: Arabella
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 139f1e7a19d74ef4ab29bf3706c16206, type: 3}
+  - _songName: Brianstorm
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 086a335cf9a7ab74fbad9503c8e07313, type: 3}
+  - _songName: Cornerstone
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 2285bfb19618cb340903ddccf88c3367, type: 3}
+  - _songName: 505
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 086a335cf9a7ab74fbad9503c8e07313, type: 3}
+  - _songName: Fireside
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 139f1e7a19d74ef4ab29bf3706c16206, type: 3}
+  - _songName: Old Yellow Bricks
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 086a335cf9a7ab74fbad9503c8e07313, type: 3}
+  - _songName: Love is a Laserquest
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: 2c76fd341b1f3b74891aadc8cb9d9628, type: 3}
+  - _songName: Balaclava
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 086a335cf9a7ab74fbad9503c8e07313, type: 3}
+  - _songName: Black Treacle
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: 2c76fd341b1f3b74891aadc8cb9d9628, type: 3}
+  _members:
+  - Alex Turner
+  - Matt Helders
+  - Jamie Cook
+  - Nick O'Malley

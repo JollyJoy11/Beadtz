@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61944a92e98143f44958d40f1a87e4b2, type: 3}
+  m_Name: Bigbang
+  m_EditorClassIdentifier: 
+  _artistName: Bigbang
+  _fame: 1030
+  _artistImage: {fileID: 21300000, guid: c77c312ef78a99641b6197c45817898e, type: 3}
+  _songs:
+  - _songName: Still Life
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 060b6f00bc1166840ba140197ac701de, type: 3}
+  - _songName: Lies
+    _songGenre: 3
+    _songImage: {fileID: 21300000, guid: 9748c27318744f94e947c3dc4be99fa2, type: 3}
+  - _songName: Stupid Liar
+    _songGenre: 0
+    _songImage: {fileID: 21300000, guid: f3796716aa104eb408f114327edf8255, type: 3}
+  - _songName: Bad Boy
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 3e5e7464656ae374dae014c9e4e5fa38, type: 3}
+  - _songName: FLOWER ROAD
+    _songGenre: 3
+    _songImage: {fileID: 21300000, guid: c04ba9dfc7229bd46ae69ac4377b532e, type: 3}
+  - _songName: Haru Haru
+    _songGenre: 3
+    _songImage: {fileID: 21300000, guid: 83bc931c2ddfffe4c80f100b5246d131, type: 3}
+  - _songName: LOSER
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 3c985ba0bd8967e41a9446c6e7d9d6e7, type: 3}
+  - _songName: Cafe
+    _songGenre: 4
+    _songImage: {fileID: 21300000, guid: f3796716aa104eb408f114327edf8255, type: 3}
+  - _songName: BANG BANG BANG
+    _songGenre: 1
+    _songImage: {fileID: 21300000, guid: 3c985ba0bd8967e41a9446c6e7d9d6e7, type: 3}
+  - _songName: WE LIKE 2 PARTY
+    _songGenre: 2
+    _songImage: {fileID: 21300000, guid: 3c985ba0bd8967e41a9446c6e7d9d6e7, type: 3}
+  _members:
+  - G Dragon
+  - T.O.P
+  - Seungri
+  - Daesung
+  - Taeyang
