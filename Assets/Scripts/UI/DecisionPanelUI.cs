@@ -28,9 +28,9 @@ public class DecisionPanelUI : MonoBehaviour
 
     void Start()
     {
-        _panel.SetActive(false);
         _choiceAButton.onClick.AddListener(OnChoiceA);
         _choiceBButton.onClick.AddListener(OnChoiceB);
+        _panel.SetActive(false);
     }
 
     void Update()

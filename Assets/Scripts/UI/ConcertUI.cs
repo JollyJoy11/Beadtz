@@ -22,28 +22,28 @@ public class ConcertUI : MonoBehaviour
     {
         _circleImage = transform.Find("ConcertTime").GetComponent<Image>();
 
-        _encoreButton = transform.Find("Events/Encore").GetComponent<Button>();
-        _securityButton = transform.Find("Events/Security").GetComponent<Button>();
-        _crowdLoseEnergyButton = transform.Find("Events/CrowdLoseEnergy").GetComponent<Button>();
-        _concertButton = transform.Find("ImageContainer/ArtistImage").GetComponent<Button>();
+        _encoreButton = transform.Find("Events/Encore")?.GetComponent<Button>();
+        _securityButton = transform.Find("Events/Security")?.GetComponent<Button>();
+        _crowdLoseEnergyButton = transform.Find("Events/CrowdLoseEnergy")?.GetComponent<Button>();
+        _concertButton = transform.Find("ImageContainer/ArtistImage")?.GetComponent<Button>();
 
-        _encoreButton.onClick.AddListener(OnEventIconTapped);
-        _securityButton.onClick.AddListener(OnEventIconTapped);
-        _crowdLoseEnergyButton.onClick.AddListener(ToggleEquipments);
-        _concertButton.onClick.AddListener(ToggleEquipments);
+        _encoreButton?.onClick.AddListener(OnEventIconTapped);
+        _securityButton?.onClick.AddListener(OnEventIconTapped);
+        _crowdLoseEnergyButton?.onClick.AddListener(ToggleEquipments);
+        _concertButton?.onClick.AddListener(ToggleEquipments);
 
-        _lightShowButton = transform.Find("Equipments/Lightshow/Image").GetComponent<Button>();
-        _fireworkButton = transform.Find("Equipments/Firework/Image").GetComponent<Button>();
-        _confettiButton = transform.Find("Equipments/Confetti/Image").GetComponent<Button>();
+        _lightShowButton = transform.Find("Equipments/Lightshow/Image")?.GetComponent<Button>();
+        _fireworkButton = transform.Find("Equipments/Firework/Image")?.GetComponent<Button>();
+        _confettiButton = transform.Find("Equipments/Confetti/Image")?.GetComponent<Button>();
 
-        _lightShowButton.onClick.AddListener(() => UseEquipment(EquipmentType.LightShow));
-        _fireworkButton.onClick.AddListener(() => UseEquipment(EquipmentType.Firework));
-        _confettiButton.onClick.AddListener(UseConfetti);
+        _lightShowButton?.onClick.AddListener(() => UseEquipment(EquipmentType.LightShow));
+        _fireworkButton?.onClick.AddListener(() => UseEquipment(EquipmentType.Firework));
+        _confettiButton?.onClick.AddListener(UseConfetti);
     }
 
     void Update()
     {
-        transform.Find("ImageContainer/ArtistImage").Rotate(Vector3.forward * 10f * Time.deltaTime);
+        transform.Find("ImageContainer/ArtistImage")?.Rotate(Vector3.forward * 10f * Time.deltaTime);
     }
 
     private void OnEventIconTapped()
@@ -93,12 +93,12 @@ public class ConcertUI : MonoBehaviour
     {
         if (_currentConcert == null) return;
 
-        _lightShowButton.interactable = _currentConcert.CheckEquipmentBought(EquipmentType.LightShow);
-        _fireworkButton.interactable = _currentConcert.CheckEquipmentBought(EquipmentType.Firework);
-        _confettiButton.interactable = _currentConcert.ConfettiCount > 0;
+        if (_lightShowButton != null) _lightShowButton.interactable = _currentConcert.CheckEquipmentBought(EquipmentType.LightShow);
+        if (_fireworkButton != null) _fireworkButton.interactable = _currentConcert.CheckEquipmentBought(EquipmentType.Firework);
+        if (_confettiButton != null) _confettiButton.interactable = _currentConcert.ConfettiCount > 0;
 
-        transform.Find("Equipments/ConfettiCount/ConfettiCountText").GetComponent<TMP_Text>().text = _currentConcert.ConfettiCount.ToString();
-        transform.Find("Equipments/ConfettiCount").gameObject.SetActive(_currentConcert.ConfettiCount > 0);
+        transform.Find("Equipments/ConfettiCount/ConfettiCountText")?.GetComponent<TMP_Text>()?.SetText(_currentConcert.ConfettiCount.ToString());
+        transform.Find("Equipments/ConfettiCount")?.gameObject.SetActive(_currentConcert.ConfettiCount > 0);
     }
 
     public void ToggleEquipments()
@@ -113,15 +113,17 @@ public class ConcertUI : MonoBehaviour
 
         _currentConcert = c;
 
-        transform.Find("CrowdEnergy").GetComponent<TMP_Text>().text = c.CrowdEnergy.ToString("F2");
-        transform.Find("ImageContainer/ArtistImage").GetComponent<Image>().sprite = c.Artist.ArtistImage;
+        transform.Find("CrowdEnergy")?.GetComponent<TMP_Text>()?.SetText(c.CrowdEnergy.ToString("F2"));
+
+        var artistImage = transform.Find("ImageContainer/ArtistImage")?.GetComponent<Image>();
+        if (artistImage != null) artistImage.sprite = c.Artist.ArtistImage;
 
         RefreshEquipmentButtons();
 
         float totalDuration = c.EndTime.GetMinutesBetween(c.ConcertTime);
         float durationLeft = GameManager.Instance.CurrentGameTime.GetMinutesBetween(c.ConcertTime);
         currentFill = durationLeft < totalDuration ? 1f - (durationLeft / totalDuration) : 0f;
-        _circleImage.fillAmount = currentFill;
+        if (_circleImage != null) _circleImage.fillAmount = currentFill;
 
         // show the right event icon, hide the rest
         bool hasEncore = c.CurrentEvent is Encore && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired();
@@ -146,12 +148,12 @@ public class ConcertUI : MonoBehaviour
     public void Reset()
     {
         _currentConcert = null;
-        transform.Find("Events").gameObject.SetActive(false);
-        transform.Find("Events/Encore").gameObject.SetActive(false);
-        transform.Find("Events/Security").gameObject.SetActive(false);
-        transform.Find("Events/CrowdLoseEnergy").gameObject.SetActive(false);
-        transform.Find("Equipments").gameObject.SetActive(false);
-        transform.Find("Equipments/ConfettiCount").gameObject.SetActive(true);
+        transform.Find("Events")?.gameObject.SetActive(false);
+        transform.Find("Events/Encore")?.gameObject.SetActive(false);
+        transform.Find("Events/Security")?.gameObject.SetActive(false);
+        transform.Find("Events/CrowdLoseEnergy")?.gameObject.SetActive(false);
+        transform.Find("Equipments")?.gameObject.SetActive(false);
+        transform.Find("Equipments/ConfettiCount")?.gameObject.SetActive(true);
 
         if (_lightShowButton != null) _lightShowButton.interactable = true;
         if (_fireworkButton != null) _fireworkButton.interactable = true;

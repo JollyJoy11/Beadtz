@@ -8,7 +8,10 @@ public static class EventFactory
         GameDateTime now = GameManager.Instance.CurrentGameTime;
         GameDateTime encoreTriggerTime = concert.EndTime.GetSubtractMinuteTime(8);
 
-        if (now.IsTimeBetween(encoreTriggerTime, concert.EndTime) && concert.CrowdEnergy > 85 && !concert.CompletedEvents.OfType<Encore>().Any() && !concert.Venue.CheckScheduleAfter(concert.EndTime.GetAddMinuteTime(10)))
+        if (now.IsTimeBetween(encoreTriggerTime, concert.EndTime)
+            && concert.CrowdEnergy > 85
+            && !concert.CompletedEvents.OfType<Encore>().Any()
+            && !concert.Venue.CheckScheduleAfter(concert.EndTime.GetAddMinuteTime(10)))
         {
             return new Encore();
         }
@@ -26,7 +29,9 @@ public static class EventFactory
         }
 
         float securityRate = concert.Venue.Type == VenueType.Outdoor ? 0.09f : 0.05f;
-        if (Random.value < securityRate && now.GetMinutesBetween(concert.LastSecurityEventTime) >= 5 && !now.IsTimeBetween(concert.EndTime.GetSubtractMinuteTime(5), concert.EndTime))
+        if (Random.value < securityRate
+            && now.GetMinutesBetween(concert.LastSecurityEventTime) >= 5
+            && !now.IsTimeBetween(concert.EndTime.GetSubtractMinuteTime(5), concert.EndTime))
         {
             return new Security();
         }
