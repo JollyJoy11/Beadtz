@@ -56,8 +56,3 @@ Assets/
 - Unity (C#)
 - DOTween — animation tweening
 - TextMeshPro — UI text rendering
-
-## Submission Notes
-
-The unit test file (`TestArtist`) is in `Assets/Tests`.
-UML class diagram, sequence diagram, and unit test passing screenshot are in the `CustomProgramSubmissionRequirements` folder.
