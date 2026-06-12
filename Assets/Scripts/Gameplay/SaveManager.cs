@@ -28,6 +28,11 @@ public class SaveManager : MonoBehaviour
         SaveGame();
     }
 
+    void OnApplicationPause(bool pause)
+    {
+        if (pause) SaveGame();
+    }
+
     public void SaveGame()
     {
         SaveData saveData = new SaveData
@@ -216,6 +221,14 @@ public class SaveManager : MonoBehaviour
                     else if (eventData.eventType == "Security")
                     {
                         completedEvent = new Security();
+                    }
+                    else if (eventData.eventType == "FanRushesStage")
+                    {
+                        completedEvent = new FanRushesStage();
+                    }
+                    else if (eventData.eventType == "ArtistExhausted")
+                    {
+                        completedEvent = new ArtistExhausted();
                     }
                     else
                     {

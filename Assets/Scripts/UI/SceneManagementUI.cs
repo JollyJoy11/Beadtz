@@ -10,6 +10,7 @@ public class SceneManagementUI : MonoBehaviour
 
     public void SwitchScene(string scene)
     {
+        if (scene == "Artists") SaveManager.Instance?.SaveGame();
         SceneManager.LoadScene(scene);
     }
 
