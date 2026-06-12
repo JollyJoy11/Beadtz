@@ -11,6 +11,8 @@ public class ConcertUI : MonoBehaviour
     private Button _encoreButton;
     private Button _securityButton;
     private Button _crowdLoseEnergyButton;
+    private Button _fanRushesStageButton;
+    private Button _artistExhaustedButton;
     private Button _concertButton;
     private Button _lightShowButton;
     private Button _fireworkButton;
@@ -25,11 +27,15 @@ public class ConcertUI : MonoBehaviour
         _encoreButton = transform.Find("Events/Encore")?.GetComponent<Button>();
         _securityButton = transform.Find("Events/Security")?.GetComponent<Button>();
         _crowdLoseEnergyButton = transform.Find("Events/CrowdLoseEnergy")?.GetComponent<Button>();
+        _fanRushesStageButton = transform.Find("Events/FanRushesStage")?.GetComponent<Button>();
+        _artistExhaustedButton = transform.Find("Events/ArtistExhausted")?.GetComponent<Button>();
         _concertButton = transform.Find("ImageContainer/ArtistImage")?.GetComponent<Button>();
 
         _encoreButton?.onClick.AddListener(OnEventIconTapped);
         _securityButton?.onClick.AddListener(OnEventIconTapped);
         _crowdLoseEnergyButton?.onClick.AddListener(ToggleEquipments);
+        _fanRushesStageButton?.onClick.AddListener(OnEventIconTapped);
+        _artistExhaustedButton?.onClick.AddListener(OnEventIconTapped);
         _concertButton?.onClick.AddListener(ToggleEquipments);
 
         _lightShowButton = transform.Find("Equipments/Lightshow/Image")?.GetComponent<Button>();
@@ -125,24 +131,15 @@ public class ConcertUI : MonoBehaviour
         currentFill = durationLeft < totalDuration ? 1f - (durationLeft / totalDuration) : 0f;
         if (_circleImage != null) _circleImage.fillAmount = currentFill;
 
-        // show the right event icon, hide the rest
-        bool hasEncore = c.CurrentEvent is Encore && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired();
-        bool hasSecurity = c.CurrentEvent is Security && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired();
-        bool hasCrowdLoseEnergy = c.CurrentEvent is CrowdLoseEnergy && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired();
+        bool active = c.CurrentEvent != null && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired();
 
-        transform.Find("Events/Encore").gameObject.SetActive(hasEncore);
-        transform.Find("Events/Security").gameObject.SetActive(hasSecurity);
-        transform.Find("Events/CrowdLoseEnergy").gameObject.SetActive(hasCrowdLoseEnergy);
+        transform.Find("Events/Encore")?.gameObject.SetActive(active && c.CurrentEvent is Encore);
+        transform.Find("Events/Security")?.gameObject.SetActive(active && c.CurrentEvent is Security);
+        transform.Find("Events/CrowdLoseEnergy")?.gameObject.SetActive(active && c.CurrentEvent is CrowdLoseEnergy);
+        transform.Find("Events/FanRushesStage")?.gameObject.SetActive(active && c.CurrentEvent is FanRushesStage);
+        transform.Find("Events/ArtistExhausted")?.gameObject.SetActive(active && c.CurrentEvent is ArtistExhausted);
 
-        bool anyEvent = hasEncore || hasSecurity || hasCrowdLoseEnergy;
-        transform.Find("Events").gameObject.SetActive(anyEvent);
-
-        // for new event types (FanRushesStage, ArtistExhausted) show CrowdLoseEnergy icon as fallback
-        if (!anyEvent && c.CurrentEvent != null && !c.CurrentEvent.Handled && !c.CurrentEvent.HasExpired())
-        {
-            transform.Find("Events").gameObject.SetActive(true);
-            transform.Find("Events/CrowdLoseEnergy").gameObject.SetActive(true);
-        }
+        transform.Find("Events")?.gameObject.SetActive(active);
     }
 
     public void Reset()
@@ -152,6 +149,8 @@ public class ConcertUI : MonoBehaviour
         transform.Find("Events/Encore")?.gameObject.SetActive(false);
         transform.Find("Events/Security")?.gameObject.SetActive(false);
         transform.Find("Events/CrowdLoseEnergy")?.gameObject.SetActive(false);
+        transform.Find("Events/FanRushesStage")?.gameObject.SetActive(false);
+        transform.Find("Events/ArtistExhausted")?.gameObject.SetActive(false);
         transform.Find("Equipments")?.gameObject.SetActive(false);
         transform.Find("Equipments/ConfettiCount")?.gameObject.SetActive(true);
 
