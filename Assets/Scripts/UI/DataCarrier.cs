@@ -8,9 +8,9 @@ public class DataCarrier : MonoBehaviour
     public Artist SelectedArtist;
     public City SelectedCity;
     public Venue SelectedVenue;
-    public List<Song> SelectedSongs;
+    public List<Song> SelectedSongs = new List<Song>();
     public GameDateTime SelectedTime;
-    public List<Equipment> SelectedEquipment;
+    public List<Equipment> SelectedEquipment = new List<Equipment>();
 
     private void Awake()
     {

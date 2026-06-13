@@ -75,34 +75,36 @@ public class SaveManager : MonoBehaviour
                 }).ToList()
             }).ToList(),
 
-            concertData = GameManager.Instance.Player.Concerts.Select(concert => new ConcertSaveData
-            {
-                artistName = concert.Artist.ArtistName,
-                cityName = concert.City.CityName,
-                venueName = concert.Venue.VenueName,
-                setlistSongNames = concert.Setlist.Select(song => song.SongName).ToList(),
-                concertTime = concert.ConcertTime,
-                equipmentBought = concert.EquipmentBought.Select(equipment => new EquipmentSaveData
+            concertData = GameManager.Instance.Player.Concerts
+                .Where(concert => concert.Artist != null && concert.City != null && concert.Venue != null)
+                .Select(concert => new ConcertSaveData
                 {
-                    equipmentName = equipment.EquipmentType.ToString(),
-                    used = equipment.Used
-                }).ToList(),
+                    artistName = concert.Artist.ArtistName,
+                    cityName = concert.City.CityName,
+                    venueName = concert.Venue.VenueName,
+                    setlistSongNames = concert.Setlist?.Select(song => song.SongName).ToList() ?? new List<string>(),
+                    concertTime = concert.ConcertTime,
+                    equipmentBought = concert.EquipmentBought?.Select(equipment => new EquipmentSaveData
+                    {
+                        equipmentName = equipment.EquipmentType.ToString(),
+                        used = equipment.Used
+                    }).ToList() ?? new List<EquipmentSaveData>(),
 
-                completedEvents = concert.CompletedEvents.Select(events => new EventSaveData
-                {
-                    eventType = events.GetType().Name,
-                    expEffect = events.ExpEffect,
-                    handled = events.Handled
-                }).ToList(),
+                    completedEvents = concert.CompletedEvents?.Select(events => new EventSaveData
+                    {
+                        eventType = events.GetType().Name,
+                        expEffect = events.ExpEffect,
+                        handled = events.Handled
+                    }).ToList() ?? new List<EventSaveData>(),
 
-                crowdSize = concert.CrowdSize,
-                crowdEnergy = concert.CrowdEnergy,
-                status = concert.Status.ToString(),
-                expEarned = concert.ExpEarned,
-                moneyEarned = concert.MoneyEarned,
-                notificationSent = concert.NotificationSent,
-                confettiCount = concert.ConfettiCount
-            }).ToList()
+                    crowdSize = concert.CrowdSize,
+                    crowdEnergy = concert.CrowdEnergy,
+                    status = concert.Status.ToString(),
+                    expEarned = concert.ExpEarned,
+                    moneyEarned = concert.MoneyEarned,
+                    notificationSent = concert.NotificationSent,
+                    confettiCount = concert.ConfettiCount
+                }).ToList()
         };
 
         string json = JsonUtility.ToJson(saveData, true);
@@ -112,6 +114,30 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGame()
     {
+        foreach (City city in GameManager.Instance.Cities)
+        {
+            city.Unlocked = false;
+            foreach (Venue venue in city.Venues)
+            {
+                venue.IsBought = false;
+                venue.ConcertCount = 0;
+                venue.Schedules.Clear();
+            }
+        }
+
+        foreach (GameLevel level in LevelManager.Instance.Levels)
+        {
+            foreach (Artist artist in level.ArtistsToUnlock)
+            {
+                artist.Energy = 100f;
+                artist.IsOnBreak = false;
+                artist.BreakStartTime = null;
+            }
+        }
+
+        GameManager.Instance.Player.ArtistsUnlocked.Clear();
+        GameManager.Instance.Player.Concerts.Clear();
+
         if (File.Exists(savePath))
         {
             Debug.Log($"Save file path: {Application.persistentDataPath}/savefile.json");
@@ -181,7 +207,9 @@ public class SaveManager : MonoBehaviour
             {
                 Artist a = GameManager.Instance.Player.ArtistsUnlocked.FirstOrDefault(artist => artist.ArtistName == concertData.artistName);
                 City c = GameManager.Instance.Cities.FirstOrDefault(city => city.CityName == concertData.cityName);
+                if (a == null || c == null) continue;
                 Venue v = c.Venues.FirstOrDefault(venue => venue.VenueName == concertData.venueName);
+                if (v == null) continue;
 
                 List<Song> setlist = new List<Song>();
                 foreach (string s in concertData.setlistSongNames)
@@ -259,5 +287,7 @@ public class SaveManager : MonoBehaviour
             GameManager.Instance.CurrentGameTime = new GameDateTime(1, 1, 2010, 12, 0);
             GameManager.Instance.Player.LevelUpReward();
         }
+
+        FindFirstObjectByType<UIManager>()?.UpdateCityUI();
     }
 }

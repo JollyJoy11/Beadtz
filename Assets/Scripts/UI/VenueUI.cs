@@ -22,11 +22,13 @@ public class VenueUI : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("UI Image Clicked: " + gameObject.name);
 
+        if (venue == null) return;
+
         foreach (City c in GameManager.Instance.Cities)
         {
             foreach (Venue v in c.Venues)
             {
-                if (gameObject.name == v.VenueName)
+                if (v == venue)
                 {
                     Debug.Log("City Clicked: " + c.CityName);
                     Debug.Log("Venue Clicked: " + v.VenueName);
@@ -36,7 +38,7 @@ public class VenueUI : MonoBehaviour, IPointerClickHandler
                     {
                         DataCarrier.Instance.SetSelectedLocation(c, v);
                     }
-                    break;
+                    return;
                 }
             }
         }
